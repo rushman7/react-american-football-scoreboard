@@ -6,11 +6,21 @@ const BottomRow = (props) => {
     <div className="bottomRow">
       <div className="down">
         <h3 className="down__title">Down</h3>
-        <div className="down__value">{3}</div>
+        <div className="down__value">
+        {
+          ((props.home - props.away) <= 0) 
+          ? (Math.abs(props.home - props.away)) : 
+          0
+        }</div>
       </div>
       <div className="toGo">
         <h3 className="toGo__title">To Go</h3>
-        <div className="toGo__value">7</div>
+        <div className="toGo__value">       
+        {
+          ((props.away - props.home) >= 0) 
+          ? (Math.abs(props.away - props.home)) : 
+          0
+        }</div>
       </div>
       <div className="ballOn">
         <h3 className="ballOn__title">Ball on</h3>

@@ -31,7 +31,7 @@ const TopRow = () => {
             <div className="away__score">{away}</div>
           </div>
         </div>
-        <BottomRow />
+        <BottomRow home={home} away={away}/>
       </section>
       <section className="buttons">
         <div className="homeButtons">
